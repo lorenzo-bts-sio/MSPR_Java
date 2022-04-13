@@ -14,29 +14,23 @@ public class utils
 {
 
     public  static List reader (String path)
-    {
-        String fileName = path;
+        {
+            String fileName = path;
 		    List<String> list = new ArrayList<>();
 
 		    try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) 
             {
-
-			//br returns as stream and convert it into a List
 			    list = br.lines().collect(Collectors.toList());
             
-
 		    } catch (IOException e) 
             {
-			    e.printStackTrace();
+			    System.out.println("Erreur le fichier :"+path+" est introuvable");
 		    }
             return list ;
-
-        
-
-    }
+        }
 
     // transforme le fichier en equivalent du dico en python 
-    public static  void map (String path) throws IOException
+    public static  String map (String path , Object matos) throws IOException
     {
         String filePath = path;
         HashMap<String, String> map = new HashMap<String, String>();
@@ -53,15 +47,19 @@ public class utils
                 String value = parts[1];
                 map.put(key, value);
             } else {
-                System.out.println("ignoring line: " + line);
+                System.out.println("ligne ignorer : " + line);
             }
         }
     
         for (String value : map.keySet())
         {
-            System.out.println( map.get(value));
+            
+            if(matos.equals(value))
+                return map.get(value);
+                reader.close();
         }
         reader.close();
+        return null;
     }
 
     
