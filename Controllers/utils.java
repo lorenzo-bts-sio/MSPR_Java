@@ -13,30 +13,27 @@ import java.util.stream.Collectors;
 public class utils 
 {
 
-    public  static List reader (String path)
+    public  static List reader (String file_name)
         {
-            String fileName = path;
 		    List<String> list = new ArrayList<>();
 
-		    try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) 
+		    try (BufferedReader br = Files.newBufferedReader(Paths.get(file_name))) 
             {
 			    list = br.lines().collect(Collectors.toList());
             
 		    } catch (IOException e) 
             {
-			    System.out.println("Erreur le fichier :"+path+" est introuvable");
+			    System.out.println("Erreur le fichier :"+file_name+" est introuvable");
 		    }
             return list ;
         }
 
-    // transforme le fichier en equivalent du dico en python 
-    public static  String map (String path , Object matos) throws IOException
+    // transforme le fichier en equivalent du dico en python et retourne la valeur associer a la clef (passer en paramttre )
+    public static  String map (String file_path , Object matos) throws IOException
     {
-        String filePath = path;
         HashMap<String, String> map = new HashMap<String, String>();
-    
         String line;
-        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        BufferedReader reader = new BufferedReader(new FileReader(file_path));
         while ((line = reader.readLine()) != null)
         {
             String[] parts = line.split(":", 2);
@@ -46,20 +43,21 @@ public class utils
                 String key = parts[0];
                 String value = parts[1];
                 map.put(key, value);
-            } else {
-                System.out.println("ligne ignorer : " + line);
+            } 
+            else 
+            {
+                System.out.println("élément inconue : " + line);
             }
         }
     
         for (String value : map.keySet())
         {
-            
             if(matos.equals(value))
                 return map.get(value);
-                reader.close();
+            reader.close();
         }
         reader.close();
-        return null;
+        return ""; 
     }
 
     

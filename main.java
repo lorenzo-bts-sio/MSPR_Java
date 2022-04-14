@@ -11,31 +11,35 @@ public static void main(String[] args) throws Exception
    int i = 1 ; 
    for (Object name_agent :utils.reader("/home/lorenzo/Documents/mspr/java/agents/staff.txt"))
    { 
-     index.generate_index(name_agent, "/home/lorenzo/Documents/mspr/java/vues/index.html");
+     index.generate_index(name_agent, "/home/lorenzo/Documents/mspr/java/vues/index.html"); 
+     i =1;
      for (Object fiche_agent :utils.reader("/home/lorenzo/Documents/mspr/java/agents/"+name_agent+"/"+name_agent+".txt"))
-      {  
+      { 
         if(i == 1 )
           {
-            agent.generate_header_page( fiche_agent, "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","nom",1);
+            // champs contenant le nom de la personne 
+            agent.generate_agent_page( fiche_agent, "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","nom",1);
           }
         else if (i ==2)
           {
-            agent.generate_header_page( fiche_agent, "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","prenom",1);
+            // champs contenant le prenom de la personne 
+            agent.generate_agent_page( fiche_agent, "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","prenom",1);
           }
         else if (i ==3)
           {
-            agent.generate_header_page( fiche_agent, "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","poste",3);
+            // champs contenant le poste 
+            agent.generate_agent_page( fiche_agent, "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","poste",3);
           }
         
         else if (i ==4)
           {
-            
+            // champs contenant le mot de passe 
           }
         
         else 
         {
-          
-          agent.generate_header_page(utils.map("/home/lorenzo/Documents/mspr/java/matos/liste.txt",fiche_agent), "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","mastos",3);
+          // champs contenant la liste du matos pris 
+          agent.generate_agent_page(utils.map("/home/lorenzo/Documents/mspr/java/matos/liste.txt",fiche_agent), "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","mastos",3);
         }
         i++;
 
@@ -44,6 +48,7 @@ public static void main(String[] args) throws Exception
    }
 
 }
+
 }
 
 
