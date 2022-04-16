@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('clone') {
+            steps {
+        sh "rm -rf *"
+                sh "cd /var/www/html/"
+                sh "git clone https://github.com/lorenzo-bts-sio/MSPR_Java.git "
+            }
+        }
+        stage('build') {
+            steps {
+               sh "cd /var/www/html/MSPR_Java && javac *.java"
+        }
+    }
+        stage ('run') {
+            steps {
+              sh "cd /var/www/html/MSPR_Java && java Main.java"
+              //sh "cd /var/www/html/MSPR_Java"
+             // sh "ls -ll"
+              //sh "ls -ll MSPR_Java"
+            }
+        }
+    }
+}
