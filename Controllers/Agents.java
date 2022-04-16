@@ -19,7 +19,7 @@ public class Agents{
            + "<meta http-equiv='X-UA-Compatible' content='IE=edge'>\n"
            + "<meta name='viewport' content='width=device-width, initial-scale=1'>\n"
            + "<title>"+ficher_agent+"</title>\n"      
-           + "<link rel='stylesheet' href='styles.css'>\n"
+           + "<link rel='stylesheet' href='./style.css'>"
            + "</head>\n"
            + "<body>\n"
            + "<button onclick=window.location.href='/index.html'>Retour</button>\n"
