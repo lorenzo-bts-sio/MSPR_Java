@@ -1,0 +1,30 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+html, body, html * {
+  font-family: 'Roboto', sans-serif;
+}
+
+*::first-letter {
+	text-transform: uppercase;
+}
+
+/* le first letter fonctionne pour tous les textes situé entre des balises (p, h1, h2...) mais pas sur le texte hors balise /!\ */
+
+
+
+* {
+	font-weight: 300;
+	background-color: #659224;
+	color: #000000;
+}
+
+
+ span{
+	 display: flex;
+	 justify-content: center;
+ }
+ 
+
+ 
+ h1{
+	 color: #379EC1;
+ }
