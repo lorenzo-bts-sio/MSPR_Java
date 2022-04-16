@@ -22,7 +22,7 @@ public class Agents{
            + "<link rel='stylesheet' href='styles.css'>\n"
            + "</head>\n"
            + "<body>\n"
-           + "<button onclick=window.location.href='/index'>Retour</button>\n"
+           + "<button onclick=window.location.href='/index.html'>Retour</button>\n"
 
             );
        }
