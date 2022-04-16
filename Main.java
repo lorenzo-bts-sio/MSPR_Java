@@ -39,7 +39,7 @@ public static void main(String[] args) throws Exception
         else 
         {
           // champs contenant la liste du matos pris 
-          agent.generate_agent_page(Utils.map("./matos/liste.txt",fiche_agent), "/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html","mastos",3);
+          agent.generate_agent_page(Utils.map("./matos/liste.txt",fiche_agent), "./vues/"+name_agent+".html","mastos",3);
         }
         i++;
 

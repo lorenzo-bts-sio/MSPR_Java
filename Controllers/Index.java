@@ -17,7 +17,7 @@ public  void  generate_index(Object name_agent , String path_output) throws IOEx
     writer.close();
 
 
-    BufferedWriter view_agent = new BufferedWriter(new FileWriter("/home/lorenzo/Documents/mspr/java/vues/"+name_agent+".html"));
+    BufferedWriter view_agent = new BufferedWriter(new FileWriter("./vues/"+name_agent+".html"));
     view_agent.close();
 
 }
