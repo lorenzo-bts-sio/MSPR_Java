@@ -10,21 +10,93 @@ html, body, html * {
 /* le first letter fonctionne pour tous les textes situé entre des balises (p, h1, h2...) mais pas sur le texte hors balise /!\ */
 
 
-
 * {
-	font-weight: 300;
-	background-color: #659224;
+	font-weight: lighter;
 	color: #000000;
+	white-space: pre;
 }
 
+ 
+button {
+  display: inline-block;
+  background-color: #379EC1;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  font-weight: lighter;
+  /*padding: 20px;*/
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  top: 0;
+  width: 99%;
+  white-space: normal;
+}
 
- span{
-	 display: flex;
-	 justify-content: center;
+a {
+  display: inline-block;
+  background-color: #379EC1;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  font-weight: lighter;
+  cursor: pointer;
+  margin: 5px;
+  width: 99%;
+  white-space: normal;
+  top: 0;
+}
+
+h1 {
+  display: inline-block;
+  background-color: #659224;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: left;
+  font-size: 28px;
+  font-weight: lighter;
+  margin: 5px;
+  width: auto;
+  height: auto;
+  padding: 4px;
+
+}
+ 
+ h2 {
+  display: inline-block;
+  background-color: #000000;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: left;
+  font-size: 28px;
+  font-weight: lighter;
+  margin: 5px;
+  width: auto;
+  height: auto;
+  padding: 4px;
+	  
  }
  
-
- 
- h1{
-	 color: #379EC1;
- }
+h3 {
+  display: inline-block;
+  background-color: #659224;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: left;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 5px;
+  width: auto;
+  height: auto;
+  padding: 4px;
+}
