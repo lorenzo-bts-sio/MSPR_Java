@@ -14,7 +14,7 @@ public class Agents {
        if (name_div=="nom")
        {
         String path_logo = "./img/logo.jpeg";
-        String path_id_card ="/tmp/MSPR_Java/agents/"+name_agent+"/"+name_agent+".jpg";
+        String path_id_card ="./img/"+name_agent+".jpg";
         writer.write("<!DOCTYPE html> \n"
            + "<html lang='fr'>\n"
            + "<head>\n"
