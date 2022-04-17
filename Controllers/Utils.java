@@ -3,7 +3,6 @@ package Controllers;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -16,7 +15,6 @@ public class Utils
 
     public static Runnable htpasswd (String path , Object login , Object password) 
     {
-       // String command = "htpasswd "+path+" "+ login+" "+password;
        String command = String.format("touch %s",path);
        String command2 = String.format("htpasswd -db %s %s %s",path,login,password);
 
@@ -26,8 +24,6 @@ public class Utils
             Runtime.getRuntime().exec(command2);
             
         }
-    
-        
         catch (IOException e) 
         {
             System.err.println("erreur dans la commande ");

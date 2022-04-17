@@ -13,8 +13,8 @@ public class Agents {
        
        if (name_div=="nom")
        {
-        String path_logo = "./img/logo.jpeg";
-        String path_id_card ="./img/"+name_agent+".jpg";
+        String path_logo = "../img/logo.jpeg";
+        String path_id_card ="../img/"+name_agent+".jpg";
         writer.write("<!DOCTYPE html> \n"
            + "<html lang='fr'>\n"
            + "<head>\n"
@@ -34,7 +34,7 @@ public class Agents {
        }
         else if (name_div =="poste")
        {
-            writer.write("<h2> Poste : </h2> <div Class="+name_div+"> <h"+number+">"+ficher_agent+"</h"+number+"> </div> <h2> Liste du matériel pris  : </h2> \n");
+            writer.write("<h2> Poste : </h2> <div Class="+name_div+"><h"+number+">"+ficher_agent+"</h"+number+"> </div> <h2> Liste du matériel pris  : </h2> \n");
        }
        else
         {
