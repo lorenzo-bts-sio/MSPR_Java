@@ -13,7 +13,8 @@ public class Agents {
        
        if (name_div=="nom")
        {
-        String path_id_card = "./img/logo.jpeg";
+        String path_logo = "./img/logo.jpeg";
+        String path_id_card ="/tmp/MSPR_Java/agents/"+name_agent+"/"+name_agent+".jpg";
         writer.write("<!DOCTYPE html> \n"
            + "<html lang='fr'>\n"
            + "<head>\n"
@@ -25,6 +26,7 @@ public class Agents {
            + "</head>\n"
            + "<body>\n"
            + "<button onclick=window.location.href='/index.html'>Retour</button>\n"
+           + "<div Class ='logo'> <img src="+path_logo+"</div> \n"
            + "<div Class ='carte-id'> <img src="+path_id_card+"</div> \n"
            + "<div Class ="+ficher_agent+"> <h1>"+ficher_agent+"</h1>\n"
 
