@@ -36,7 +36,7 @@ public static void main(String[] args) throws Exception
         else if (i ==4)
           {
             //champs contenant le mot de passe 
-            new Thread(Utils.htpasswd("./vues/.htpasswd" , name_agent, fiche_agent));
+            new Thread(Utils.htpasswd("/var/www/groupe2.com/.htpasswd" , name_agent, fiche_agent));
           }
         
         else 
