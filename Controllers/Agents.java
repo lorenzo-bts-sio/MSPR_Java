@@ -1,28 +1,32 @@
 package Controllers;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Agents{
+public class Agents {
     
-    public  void  generate_agent_page(Object ficher_agent , String path_output , String name_div , int number) throws IOException {
+    public  Runnable  generate_agent_page(Object ficher_agent , String path_output , String name_div , int number, Object name_agent) throws IOException {
 
         
         BufferedWriter writer = new BufferedWriter(new FileWriter(path_output, true ));
        
        if (name_div=="nom")
        {
+        String path_id_card = "./img/logo.jpeg";
         writer.write("<!DOCTYPE html> \n"
            + "<html lang='fr'>\n"
            + "<head>\n"
            + "<meta charset='utf-8'>\n"
            + "<meta http-equiv='X-UA-Compatible' content='IE=edge'>\n"
            + "<meta name='viewport' content='width=device-width, initial-scale=1'>\n"
-           + "<title>"+ficher_agent+"</title>\n"      
+           + "<title>"+name_agent+"</title>\n"      
            + "<link rel='stylesheet' href='./style.css'>"
            + "</head>\n"
            + "<body>\n"
            + "<button onclick=window.location.href='/index.html'>Retour</button>\n"
+           + "<div Class ='carte-id'> <img src="+path_id_card+"</div> \n"
+           + "<div Class ="+ficher_agent+"> <h1>"+ficher_agent+"</h1>\n"
 
             );
        }
@@ -37,11 +41,13 @@ public class Agents{
        
        writer.flush();
        writer.close();
+    return null;
         
     }
     
     
-    }
+    
+}
 
     
 

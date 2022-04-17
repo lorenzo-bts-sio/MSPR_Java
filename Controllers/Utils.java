@@ -3,6 +3,7 @@ package Controllers;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -10,8 +11,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Utils 
+public class Utils
 {
+
+    public static Runnable htpasswd (String path , Object login , Object password) 
+    {
+        try 
+        {
+            Runtime.getRuntime().exec("htpasswd -db"+path+" "+login+" "+password); 
+           
+        } 
+        catch (IOException e) 
+        {
+            System.err.println("erreur dans la commande ");
+        }
+        return null;
+    }
 
     public  static List reader (String file_name)
         {
@@ -60,6 +75,7 @@ public class Utils
         return ""; 
     }
 
+   
     
     
 }
