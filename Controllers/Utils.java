@@ -16,11 +16,18 @@ public class Utils
 
     public static Runnable htpasswd (String path , Object login , Object password) 
     {
+       // String command = "htpasswd "+path+" "+ login+" "+password;
+       String command = String.format("touch %s",path);
+       String command2 = String.format("htpasswd -db %s %s %s",path,login,password);
+
         try 
-        {
-            Runtime.getRuntime().exec("htpasswd -db"+path+" "+login+" "+password); 
-           
-        } 
+        { 
+            Runtime.getRuntime().exec(command);
+            Runtime.getRuntime().exec(command2);
+            
+        }
+    
+        
         catch (IOException e) 
         {
             System.err.println("erreur dans la commande ");
