@@ -26,8 +26,8 @@ public class Agents {
            + "</head>\n"
            + "<body>\n"
            + "<button onclick=window.location.href='/index.html'>Retour</button>\n"
-           + "<div Class ='logo'> <img src="+path_logo+"</div> \n"
-           + "<div Class ='carte-id'> <img src="+path_id_card+"</div> \n"
+           + "<div Class ='logo'> <img src="+path_logo+"> </div> \n"
+           + "<div Class ='carte-id'> <img src="+path_id_card+"> </div> \n"
            + "<div Class ="+ficher_agent+"> <h1>"+ficher_agent+"</h1>\n"
 
             );
