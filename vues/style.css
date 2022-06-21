@@ -97,7 +97,7 @@ h3 {
   padding: 4px;
 }
 
-carteid{
+.carteid{
 object-position: right top;
 width: 300px;
 height: auto;
@@ -106,7 +106,7 @@ top: 40px;
 right: 40px;
 }
 
-logo{
+.logo{
 object-position: left top;
 top: 40px;
 left: 80px;
