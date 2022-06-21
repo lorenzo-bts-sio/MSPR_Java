@@ -59,7 +59,7 @@ h1 {
   text-align: left;
   font-size: 28px;
   font-weight: lighter;
-  margin-left: 50%;
+  margin-left: 10%;
   width: auto;
   height: auto;
   padding: 4px;
@@ -75,7 +75,7 @@ h1 {
   text-align: left;
   font-size: 28px;
   font-weight: lighter;
-  margin-left: 50%;
+  margin-left: 10%;
   width: auto;
   height: auto;
   padding: 4px;
@@ -91,7 +91,7 @@ h3 {
   text-align: left;
   font-size: 20px;
   font-weight: lighter;
-  margin-left: 50%;
+  margin-left: 10%;
   width: auto;
   height: auto;
   padding: 4px;
@@ -99,8 +99,8 @@ h3 {
 
 carte-id{
 object-position: right top;
-width: 25%;
-height: 25%;
+width: 80px;
+height: 80px;
 top: 40px; right: 40px;
 }
 
