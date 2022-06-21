@@ -97,13 +97,13 @@ h3 {
   padding: 4px;
 }
 
-.carteid {
+div.carteid {
  position: relative;
  top: 40px;
  right: 40px;
 }
 
-.logo {
+div.logo {
  object-position: left top;
  top: 40px;
  left: 80px;
