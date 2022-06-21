@@ -98,10 +98,7 @@ h3 {
 }
 
 .carteid {
- object-position: right top;
- width: 300px;
- height: 200px;
- max-width: 25%;
+ position: relative;
  top: 40px;
  right: 40px;
 }
