@@ -23,6 +23,7 @@ public  Runnable  generate_index(Object name_agent , String path_output,  int nu
            + "<link rel='stylesheet' href='./style.css'>\n"
            + "</head>\n"
            + "<body>\n"
+           + "<div Class ='logo'> <img src="+path_logo+"> </div> \n"
           
             );
     }
