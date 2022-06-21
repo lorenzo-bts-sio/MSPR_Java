@@ -99,7 +99,7 @@ h3 {
 
 div.carteid {
  position: absolute;
- top: 400px;
+ top: auto ;
  right: 40px;
 }
 
