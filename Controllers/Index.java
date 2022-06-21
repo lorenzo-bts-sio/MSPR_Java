@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Index {
     
-public  Runnable  generate_index(Object name_agent , String path_output,  int number ) throws IOException {
+public  Runnable  generate_index(Object name_agent , String path_output,  int number ,  String path_logo) throws IOException {
 
     BufferedWriter writer = new BufferedWriter(new FileWriter(path_output, true));
     
