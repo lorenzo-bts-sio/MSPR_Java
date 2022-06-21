@@ -97,7 +97,17 @@ h3 {
   padding: 4px;
 }
 
-img{
-position: absolute;
+carte-id{
+object-position: right top;
+width: 25%;
+height: 25%;
 top: 40px; right: 40px;
 }
+
+logo{
+object-position: left top;
+top: 40px;
+left: 80px;
+}
+style.css
+3 Ko
